@@ -15,7 +15,7 @@ gem 'sqlite3'
 gem 'devise'
 
 gem 'carrierwave'
-gem 'paperclip'
+gem 'kaminari'
 gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'font-awesome-rails'
