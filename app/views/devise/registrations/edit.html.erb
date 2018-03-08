@@ -35,7 +35,8 @@
     <%= f.submit "Update" %>
   </div>
 
-  <!-- added from slides -->
+
+
   <div class="form-group">
     <%= f.text_field :name, placeholder: "Your Name", class: "form-control" %>
   </div>
@@ -48,6 +49,12 @@
   <div class="form-group">
     <%= f.text_area :bio, placeholder: "Tell us about yourself...", class: "form-control" %>
   </div>
+  <div class="form-group">
+    <strong>Upload a Profile Pic:</strong>
+    <%= f.file_field :avatar %>
+  </div>
+
+
 
 <% end %>
 

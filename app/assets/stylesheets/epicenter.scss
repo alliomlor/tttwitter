@@ -1,0 +1,68 @@
+// Place all the styles related to the Epicenter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background-image: url('https://media.giphy.com/media/AYAC2164QT3os/giphy.gif');
+}
+
+.container h5 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.container h2 {
+  color: white;
+  text-transform: uppercase;
+}
+
+.container h1 {
+  color: white;
+}
+
+#username {
+  color: blue;
+}
+
+#tweets #username {
+  font-weight: bold;
+  color: blue;
+}
+
+.btn-primary {
+  padding: 3px;
+  margin-top: 5px;
+}
+
+.well {
+  margin-right: 30px;
+}
+
+.avatar {
+  float: left;
+  padding-right: 20px;
+}
+
+#tweet-message {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+#tweet-time {
+  font-size: 14px;
+  font-weight: bold;
+  color: grey;
+}
+
+#tweet-and-time {
+  float: center;
+}
+
+#dash {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.heading {
+  text-align: center;
+}

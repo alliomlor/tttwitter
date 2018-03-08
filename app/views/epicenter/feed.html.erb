@@ -1,0 +1,37 @@
+<!-- <h1>Epicenter#feed</h1>
+<p>Find me in app/views/epicenter/feed.html.erb</p> -->
+
+
+<div class="container">
+
+  <div class="heading">
+    <h1>@<%= current_user.username %>'s Twitter Feed</h1>
+    <h5>Here is what your "friends" are saying:</h5>
+  </div>
+
+<div class="container col-sm-12" id= "dash">
+  <div class="well">
+    <div id="tweets">
+        <% @following_tweets.reverse.each do |tweet| %>
+            <div>
+          <p id="username">@<%= tweet.user.username %></p>
+        <div class="avatar">
+          <%= image_tag tweet.user.avatar.url, size: 50 %>
+        </div>
+
+            <div class="containter" id="tweet-and-time">
+              <p id="tweet-message"><%= tweet.message.html_safe %></p>
+              <p id="tweet-time">
+              &bull; <%= time_ago_in_words(tweet.created_at) if Time.now - tweet.created_at < 86400 %>
+              <%= tweet.created_at.strftime('%b %e') if Time.now - tweet.created_at > 86400 %>
+              </p>
+            </div>
+
+        </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+​

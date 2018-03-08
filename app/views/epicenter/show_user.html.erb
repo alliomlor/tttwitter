@@ -1,0 +1,38 @@
+<!-- <h1>Epicenter#show_user</h1>
+<p>Find me in app/views/epicenter/show_user.html.erb</p> -->
+
+<div class="container">
+  <h1>@<%= @user.username %>'s Profile & Tweets</h1>
+    <div class="well col-sm-3">
+      <p><%= @user.name %></p>
+      <p><%= @user.location %></p>
+      <p><%= @user.bio %></p>
+      <p>Following <%= @user.following.length %> users</p>
+      <p><%=  %>Followers</p>
+    <p>
+      <% if current_user.following.include?(@user.id) %>
+          <%= link_to "Following", unfollow_path(id: @user.id), class: "btn btn-primary", id: "unfollow-btn" %>
+      <% else %>
+          <% if current_user.id != @user.id %>
+        <%= link_to "Follow", now_following_path(id: @user.id), class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
+    </p>
+
+
+    <p>
+      <%= link_to "#{@user.username}'s Followers", followers_path(id: @user.id), class: "btn btn-primary" %>
+      <%= link_to "#{@user.username} is Following", following_path(id: @user.id), class: "btn btn-primary" %>
+    </p>
+
+  </div>
+
+<div class="well col-sm-3">
+
+  <% @user.tweets.each do |tweet| %>
+      <div>
+          <p>@<%= @user.username %></p>
+    <p><%= tweet.message %></p>
+      </div>
+  <% end %>
+</div>
